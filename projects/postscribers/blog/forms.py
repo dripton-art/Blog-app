@@ -1,0 +1,11 @@
+from django import forms
+from .models import PostModel
+
+class PostmodelForm(forms.ModelForm):
+    content = forms.CharField(
+         widget=forms.Textarea(attrs={"rows": 4})
+    )
+    class Meta:
+        model = PostModel
+        fields = ('title', 'content')
+    
