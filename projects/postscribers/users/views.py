@@ -10,7 +10,7 @@ def sign_up(request):
         form = SignUpForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('blog-index')
+            return redirect('users-login')
     else:
         form = SignUpForm()
     context = {
